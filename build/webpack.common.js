@@ -19,6 +19,7 @@ module.exports = {
     filename: '[name].bundle.js',
     publicPath: '/',
   },
+  watch: devMode,
   // 插件 plugins
   plugins: [
     // html 模板插件
@@ -60,7 +61,7 @@ module.exports = {
        // 对所有.vue文件使用vue-loader进行编译
       { test: /\.vue$/, loader: "vue-loader"},
       // 图片处理 loader
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource'},
 
       // 字体处理 loader
       { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },

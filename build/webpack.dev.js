@@ -9,6 +9,9 @@ const paths = require('../config/paths')
 module.exports = merge(common, {
   mode: process.env.NODE_ENV,
   devtool: 'inline-source-map',
+  cache: {
+    type: 'memony'
+  },
   devServer: {
     historyApiFallback: true,
     contentBase: paths.build,
