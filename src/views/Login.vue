@@ -1,13 +1,25 @@
 <template>
   <div class="login">
-    <div class="language" @click="changeLanguage()">
+    <div
+      class="language"
+      @click="changeLanguage()"
+    >
       <div class="langtxt">{{ nowLanguage }}</div>
-      <img src="@images/upload/downn.png" class="downimg" />
+      <img
+        src="@images/upload/downn.png"
+        class="downimg"
+      />
     </div>
-    <img src="@images/upload/logo.png" class="logo" />
+    <img
+      src="@images/upload/logo.png"
+      class="logo"
+    />
 
     <div class="content">
-      <img src="@images/upload/loginicon.png" class="image" />
+      <img
+        src="@images/upload/loginicon.png"
+        class="image"
+      />
       <div class="right">
         <div class="title">{{ $t("ivcs.systemtitle") }}</div>
         <div class="subtitle">{{ $t("ivcs.welcome") }}</div>
@@ -33,7 +45,10 @@
           v-model="org"
           @keyup.enter.native="LoginSystem"
         />
-        <div class="btn" @click="LoginSystem">{{ $t("ivcs.login") }}</div>
+        <div
+          class="btn"
+          @click="LoginSystem"
+        >{{ $t("ivcs.login") }}</div>
       </div>
     </div>
   </div>
@@ -78,7 +93,7 @@ export default {
     },
   },
 
-  mounted() {},
+  mounted() { },
 
   methods: {
     ...mapMutations(["SET_LANG", "SET_LANGUAGE"]),
@@ -108,7 +123,7 @@ export default {
           self.$i18n.locale = self.$store.state.languages.lang;
           self.nowLanguage = self.$store.state.languages.language;
         },
-        onCancel() {},
+        onCancel() { },
       });
     },
 
@@ -190,8 +205,9 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #00ff00;
-  /* background: url("@images/uplaod/background.png"); */
-  background-repeat: no-repeat;
+  background: url("@images/upload/background.png");
+  background-size: 100%;
+  border-image-repeat: repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
