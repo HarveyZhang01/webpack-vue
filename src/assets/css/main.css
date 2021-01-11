@@ -1,0 +1,11 @@
+.defaultbackColor{
+  background:rgba(100,202,171,1);
+}
+
+
+.flexcolumn{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}

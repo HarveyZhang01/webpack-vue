@@ -1,0 +1,259 @@
+/* Elements----------------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+/*右侧悬浮icon*/
+.side-bar {
+    width: 36px;
+    position: fixed;
+    bottom:40%;
+    right: 25px;
+    font-size: 0;
+/*     line-height: 0; */
+    z-index: 2;
+}
+.side-bar .mian {
+	white-space:normal;
+	word-break:break-all;
+	word-wrap:break-word;
+    border-radius:20px;
+	width: 32px;
+	display: inline-block;
+	background-color: #29a7e2;
+	margin-bottom: 2px;
+    font-size: 23px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.side-bar .mian img{
+ position: absolute;
+    top:7%;
+    left: 1px;
+    width: 30px;
+    height: 30px;
+}
+.pop { width: 100%;
+
+    position: relative;
+    top: 0;
+    right: 0.5%;
+    bottom: 0;
+    float: left;
+    padding-left: -190px;
+    margin: auto;
+    padding: 0px;
+    z-index: 3;
+   }
+.pop-top{  height: 45px;
+width: 100%;
+line-height: 45px;
+border-bottom: 1px #E5E5E5 solid;
+background-color: #29a7e2; padding-left:5px;
+}
+
+.pop-top h2{  float: left;  display:block;padding-left: 18px;color: #ffffff;}
+.pop-top span{  float: right;  cursor: pointer;  font-weight: bold; display:block}
+.pop-foot{  height:50px;  line-height:50px;  width:100%;  border-top: 1px #E5E5E5 solid;  text-align: right;  }
+.pop-cancel, .pop-ok {  padding:8px 15px;  margin:15px 5px;  border: none;  border-radius: 5px;  background-color: #337AB7;  color: #fff;  cursor:pointer;  }
+.pop-cancel {  background-color: #FFF;  border:1px #CECECE solid;  color: #000;  }
+.pop-content{  height:65%;  }
+.pop-close{ padding-right:20px;color: #CECECE; font-size: 20px;}
+.pop-content-left{  float: left;  }
+
+.tishi{height:30px;background-color: #dddddd; width:100%;line-height: 30px;position: absolute;left:71%;}
+
+
+s
+input,button{
+    outline:none;}
+.wenwen-footer{width: 100%;
+    position: absolute;
+    /* bottom: 10%; */
+    top: 60%;
+    left: 0;
+    background: #fff;
+    border-top: solid 1px #ddd;
+    box-sizing: border-box;
+    padding: 2%;}
+.wenwen_btn,.wenwen_help{width:10%;text-align:center;}
+.wenwen_btn img,.wenwen_help img{height:20px;}
+.wenwen_text{height:45px;border-radius:5px;border:solid 1px #636162;box-sizing:border-box;width:66%;text-align:center;overflow:hidden;margin-left:2%;}
+.circle-button{padding:0 5px;}
+.wenwen_text .circle-button{font-size:14px;color:#666;line-height:45px;}
+.write_box{background:#fff;width:100%;height:70px;}
+.write_box input {height:45px;width:100%;
+    padding: 5px;
+    overflow: auto;line-height: 45px }
+.send1{
+    clear: both;
+    position: fixed;
+    top:55.5%;
+    left:50px;
+}
+.duihua{
+	white-space:normal;
+	word-break:break-all;
+	word-wrap:break-word;
+	background: #42929d;
+	color: #fff;
+    text-align: left;
+    border-radius:3%;
+    margin-top: 14px;
+    padding-left: 9px;
+    padding-bottom: 8px;}
+#wenwen{height:100%;}
+.speak_window{overflow-y:scroll; height:50%;width:100%;position:absolute;float:left;}
+.speak_box{margin-bottom:70px;padding:10px;}
+.question,.answer{margin-bottom:1rem;}
+.question{text-align:right;}
+.question>div{display:inline-block;}
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+
+.heard_img{height:50px;width:50px;border-radius:5px;overflow:hidden;background:#ddd;}
+.heard_img img{width:100%;height:100%}
+.question_text,.answer_text{box-sizing:border-box;position:relative;display:table-cell;min-height:60px;}
+.question_text{padding-right:20px;}
+.answer_text{padding-left:20px;}
+.question_text p,.answer_text p{border-radius:10px;padding:.5rem;margin:0;font-size:14px;line-height:28px;box-sizing:border-box;vertical-align:middle;display:table-cell;height:60px;word-wrap:break-word;}
+.answer_text p{background:#fff;}
+.question_text p{background:#42929d;color:#fff;text-align:left;}
+.question_text i,.answer_text i{width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;position:absolute;top:25px;}
+.answer_text i{border-right:10px solid #42929d;left:10px;}
+.question_text i{border-left:10px solid #42929d;right:10px;}
+.answer_text p a{color:#42929d;display:inline-block;}
+.write_list{position:absolute;left:0;width:100%;background:#fff;border-top:solid 1px #ddd;padding:5px;line-height:30px;}
+.z_file {
+    width:27px;
+    height:27px;
+    background: url(../img/image1.png) no-repeat;
+    background-size: 100% 100%;
+    /* float: left; */
+    margin-right: 0.2rem;
+        clear: both;
+    /* position: fixed;
+    top:55.5%;
+    left:50px; */
+    display: inline-block;
+}
+.z_file:hover {
+	background-color: gainsboro;
+   width:27px;
+    height:27px;
+    background: url(../img/images2.png) no-repeat;
+    background-size: 100% 100%;
+    /* float: left; */
+    margin-right: 0.2rem;
+        clear: both;
+    /* position: fixed;
+    top:55.5%;
+    left:50px; */
+    display: inline-block;
+}
+.z_file2 {
+    width:27px;
+    height:27px;
+    background: url(../img/file1.png) no-repeat;
+    background-size: 100% 100%;
+    /* float: left; */
+    margin-right: 0.2rem;
+        clear: both;
+    /* position: fixed;
+    top:55.5%;
+    left:88px; */
+    display: inline-block;
+}
+.z_file2:hover {
+	background-color: gainsboro;
+   width:27px;
+    height:27px;
+    background: url(../img/file2.png) no-repeat;
+    background-size: 100% 100%;
+    /* float: left; */
+    margin-right: 0.2rem;
+        clear: both;
+    /* position: fixed;
+    top:55.5%;
+    left:88px; */
+    display: inline-block;
+}
+.z_photo {
+    position: fixed;
+    left: 50px;
+    top: 55.5%;
+
+}
+.z_photo img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.z_addImg {
+    float: left;
+    margin-right: 0.2rem;
+}
+
+.z_addImg img{ width:auto;
+    height:auto;}
+
+/*遮罩层*/
+.z_mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: none;
+}
+.z_alert {
+    width:20%;
+    height:15%;
+    border-radius:10%;
+    background: #fff;
+    font-size: 15px;
+    text-align: center;
+    position: fixed;
+    left: 30%;
+    top: 56%;
+    border: solid 1px;
+    /* margin-top: -2rem; */
+}
+
+.z_alert p:nth-child(1) {
+    line-height: 1.5rem;
+}
+.alert1{
+    margin-top: 10px;
+
+}
+.z_alert p:nth-child(2) span {
+    display: inline-block;
+    width: 49%;
+    height: .5rem;
+    line-height: .5rem;
+    float: left;
+}
+.z_cancel {
+    margin-top: 20px;
+}
+.z_sure{
+    margin-top: 20px;
+}
+.time1{
+
+padding-right: 20px;
+}
+
+.name1{
+    padding-bottom: 3px;
+}
