@@ -7,7 +7,7 @@
 <style type="text/css">
 *{ padding:0; margin:0}
 ul,li{ list-style:none}
-.box{ width:311px; border:3px solid #000; margin:50px 200px; overflow:hidden;zoom:1; }
+.box{ width:600px; border:3px solid #000; margin:50px 200px; overflow:hidden;zoom:1; }
 .box ul{ width:305px; overflow:hidden;zoom:1; position:relative; height:450px}
 .box ul li{ width:90px; background:#06C; float:left; height:100px; font-weight:bolder; color:#FFF; font-size:24px; text-align:center; margin:5px; line-height:100px}
 .cur{ cursor:move;}
@@ -31,9 +31,6 @@ ul,li{ list-style:none}
         <li>10</li>
         <li>11</li>
         <li>12</li>
-        
-   
- 
 </ul>
 <script>
 var oBox=document.getElementById("moveBox");
@@ -159,7 +156,7 @@ function  findObj(obj){
      return minLi;
 }
  
-//求亮点之间的距离
+//求两点之间的距离
 function  dian(obj1,obj2){
     var a=(obj1.offsetLeft + obj1.offsetWidth / 2) - (obj2.offsetLeft + obj2.offsetWidth / 2);
     var b=(obj1.offsetTop + obj1.offsetHeight / 2) - (obj2.offsetTop + obj2.offsetHeight / 2);

@@ -1,11 +1,15 @@
 <template>
   <div class="home">
-   <h1 class="fw">{{ $t("login.error") }}</h1>
+   <Modal />
   </div>
 </template>
 
 <script>
+import Modal from '@views/components/Modal.vue'
 export default {
+  components: {
+    Modal
+  },
   data() {
     return {
      

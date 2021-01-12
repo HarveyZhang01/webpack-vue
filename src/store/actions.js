@@ -1,4 +1,6 @@
 // 处理异步请求
-const actions = {}
+const actions = {
+   
+}
 
 export default actions

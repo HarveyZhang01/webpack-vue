@@ -6,7 +6,7 @@ import mutations from './mutations'
 import getters from './getters'
 import state from './state'
 import user from './modules/users'
-import LocalSave from './plugins/localSvae'
+import localSvae from './plugins/localSvae'
 
 Vue.use(Vuex)
 
@@ -18,5 +18,5 @@ export default {
   modules: {
     user
   },
-  plugins: [LocalSave],
+  plugins: [localSvae],
 }

@@ -1,10 +1,11 @@
 <template>
   <div class="login">
+    <Modal v-show="language.showLanguageModal"  :modalTitle="'语言设置'" :radioArr='language.languageArr' :modalValue="setLanguage"/>
     <div
       class="language"
       @click="changeLanguage()"
     >
-      <div class="langtxt">{{ nowLanguage }}</div>
+      <div class="langtxt">{{ language.language }}</div>
       <img
         src="@images/upload/downn.png"
         class="downimg"
@@ -27,14 +28,14 @@
           class="input"
           style="margin-top: 10px"
           :placeholder="nameplacehold"
-          v-model="name"
+          v-model="login.name"
           @keyup.enter.native="LoginSystem"
         />
         <Input
           class="input"
           style="margin-top: 10px"
           :placeholder="pwdplacehold"
-          v-model="pwd"
+          v-model="login.pwd"
           type="password"
           @keyup.enter.native="LoginSystem"
         />
@@ -42,7 +43,7 @@
           class="input"
           style="margin-top: 10px"
           :placeholder="orgplacehold"
-          v-model="org"
+          v-model="login.org"
           @keyup.enter.native="LoginSystem"
         />
         <div
@@ -56,44 +57,41 @@
 
 <script>
 // import Language from "./Toast/Language";
-// import { responseError, cacheLoginData } from "../api/api";
+import { responseError, cacheLoginData } from "../api/app.js";
+import Modal from './components/Modal'
 import { mapState, mapMutations, mapGetters, mapActions } from "vuex";
 export default {
   name: "Login",
+  components: {
+    Modal
+  },
   data() {
     return {
-      name: null,
-      pwd: null,
-      org: null,
       sessionId: null,
-      nowLanguage: this.$store.state.languages.language,
+      setLanguage: ''
     };
   },
 
   computed: {
     nameplacehold() {
-      if (this.name) {
-        return "";
-      }
-      return this.$t("ivcs.plname");
+      return this.name ? '' : this.$t("ivcs.plname");
     },
 
     pwdplacehold() {
-      if (this.pwd) {
-        return "";
-      }
-      return this.$t("ivcs.plpwd");
+       return this.pwd ? '' : this.$t("ivcs.plpwd");
     },
 
     orgplacehold() {
-      if (this.org) {
-        return "";
-      }
-      return this.$t("ivcs.plorg");
+     return this.org ? '' : this.$t("ivcs.plorg");
     },
+    ...mapGetters(['setLangauge']),
+    ...mapState(['language', 'login'])
+    
   },
 
-  mounted() { },
+  mounted() { 
+    console.log(this.login);
+  },
 
   methods: {
     ...mapMutations(["SET_LANG", "SET_LANGUAGE"]),
@@ -112,7 +110,6 @@ export default {
         okText: "OK",
         cancelText: "cancel",
         onOk() {
-          console.log(this.$refs.Language.language);
           if (this.$refs.Language.language === "简体中文") {
             self.SET_LANG("zh");
             self.SET_LANGUAGE("简体中文");
@@ -126,25 +123,24 @@ export default {
         onCancel() { },
       });
     },
-
     LoginSystem() {
-      if (this.name == null || this.name === "") {
+      if (this.login.name == null || this.login.name === "") {
         this.$Message.info(this.$t("ivcs.plname"));
         return;
-      } else if (this.pwd == null || this.pwd === "") {
+      } else if (this.login.pwd == null || this.login.pwd === "") {
         this.$Message.info(this.$t("ivcs.plpwd"));
         return;
-      } else if (this.org == null || this.org === "") {
+      } else if (this.login.org == null || this.login.org === "") {
         this.$Message.info(this.$t("ivcs.plorg"));
         return;
       }
       this.$Spin.show();
       ivcs.agent.init(
-        loginUrl,
-        this.name,
-        this.pwd,
-        this.org,
-        defaultMediaOptions,
+       this.login.loginUrl,
+       this.login.name,
+       this.login.pwd,
+       this.login.org,
+       this.login.defaultMediaOptions,
         async (resp) => {
           this.$Spin.hide();
           console.log("init success", resp);
@@ -206,8 +202,8 @@ export default {
   height: 100%;
   background-color: #00ff00;
   background: url("@images/upload/background.png");
-  background-size: 100%;
-  border-image-repeat: repeat;
+  background-size: 150% 150%;
+  background-repeat: repeat;
   background-position: center;
   display: flex;
   flex-direction: column;

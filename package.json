@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/HarveyZhang01/webpack5-vue#readme",
   "dependencies": {
+    "axios": "^0.21.1",
+    "jsplumb": "^2.15.5",
     "view-design": "^4.4.0",
     "vue": "^2.6.12",
     "vue-i18n": "^8.22.3",
