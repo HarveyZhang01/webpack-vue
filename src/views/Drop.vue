@@ -70,24 +70,13 @@ export default {
           ["Arrow", { width: 10, length: 10, location: 0.5, id: "arrow" }],
         ],
       }, _this.btnsStyle)
+       plumbIns.draggable(`node${element.id}`)
       });
        plumbIns.addEndpoint('end', {
         anchor: 'Top', connectorOverlays: [
           ["Arrow", { width: 10, length: 10, location: 0.5, id: "arrow" }],
         ],
       }, _this.btnsStyle)
-      //设置节点可拖拽
-      // plumbIns.draggable('start') 
-      plumbIns.draggable('node1')
-      plumbIns.draggable('node2')
-      plumbIns.draggable('node3')
-      plumbIns.draggable('node4')
-      plumbIns.draggable('node5')
-      plumbIns.draggable('node6')
-      plumbIns.draggable('node7')
-      plumbIns.draggable('node8')
-      plumbIns.draggable('node9')
-      plumbIns.draggable('node10')
       // plumbIns.draggable('end')
       //点击删除连接线
       plumbIns.bind('click', function (conn, originalEvent) {
